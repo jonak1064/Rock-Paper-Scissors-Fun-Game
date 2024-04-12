@@ -12,7 +12,7 @@ void main() {
           colors: [
             //passed the value of the parameters
             Color.fromRGBO(102, 22, 44, 109),
-            Color.fromRGBO(456, 232, 344, 309)
+            Color.fromRGBO(456, 232, 344, 309),
           ],
         ),
       ),

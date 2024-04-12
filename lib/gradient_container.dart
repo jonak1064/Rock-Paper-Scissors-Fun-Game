@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_4/styled_text.dart';
+import 'package:flutter_application_4/dice_roller.dart';
+//import 'package:flutter_application_4/styled_text.dart';
+//import 'package:flutter_application_4/dice_roller.dart';
 
 var startAlignment = Alignment.topLeft;
 var endtAlignment = Alignment.bottomRight;
@@ -21,8 +23,7 @@ class GradeintContainer extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Image.asset(
-            'assets/images/dice-1.png'), //value of the parameter has been passed from the styled_text page
+        child: DiceRoller(),
       ),
     );
   }

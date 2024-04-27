@@ -22,9 +22,7 @@ class GradeintContainer extends StatelessWidget {
           end: endtAlignment,
         ),
       ),
-      child: const Center(
-        child: DiceRoller(),
-      ),
+      child: const DiceRoller(),
     );
   }
 }

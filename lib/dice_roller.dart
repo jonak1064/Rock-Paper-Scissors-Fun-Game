@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+import 'package:flutter_application_4/player1.dart';
+import 'package:flutter_application_4/player2.dart';
+
+//import 'package:flutter/widgets.dart';
+
+//import 'package:flutter/widgets.dart';
+
 class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
   @override
@@ -53,7 +60,7 @@ class _DiceRollerState extends State<DiceRoller> {
           (currentDiceRoll1 == 2 && currentDiceRoll2 == 2) ||
           (currentDiceRoll1 == 3 && currentDiceRoll2 == 3)) {
         finalResult = const Text(
-          'Its a tie, fuck off!',
+          'Its a tie, fuck off Madafaka!',
           style: TextStyle(fontSize: 24),
         );
       } else if (currentDiceRoll1 == 1 && currentDiceRoll2 == 2) {
@@ -94,35 +101,15 @@ class _DiceRollerState extends State<DiceRoller> {
   Widget build(context) {
     return Center(
       child: Column(
-        // mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
-            child: Row(
-              children: [
-                topText1,
-                const SizedBox(width: 50),
-                topText2,
-              ],
-            ),
-          ),
           Row(
-            children: [
-              Image.asset(
-                'assets/images/dice-$currentDiceRoll1.png',
-                width: 200.0,
-              ),
-              const SizedBox(width: 50),
-              Image.asset(
-                'assets/images/dice-$currentDiceRoll2.png',
-                width: 200.0,
-              ),
-            ],
-          ),
-          const SizedBox(height: 20),
-          const SizedBox(
-            height: 20,
-          ),
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Player1(topText1: topText1, currentDiceRoll1: currentDiceRoll1),
+                Player2(topText2: topText2, currentDiceRoll2: currentDiceRoll2),
+              ]),
+          const SizedBox(height: 40),
           TextButton(
             onPressed: rollDice,
             style: TextButton.styleFrom(

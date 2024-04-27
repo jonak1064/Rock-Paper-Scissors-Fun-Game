@@ -9,10 +9,10 @@ void main() {
     const MaterialApp(
       home: Scaffold(
         body: GradeintContainer(
-          colors: [
+          colors1: [
             //passed the value of the parameters
-            Color.fromRGBO(102, 22, 44, 109),
-            Color.fromRGBO(456, 232, 344, 309),
+            Color.fromRGBO(157, 193, 245, 0.576),
+            Color.fromRGBO(124, 47, 71, 0.242),
           ],
         ),
       ),

@@ -8,21 +8,21 @@ var endtAlignment = Alignment.bottomRight;
 
 class GradeintContainer extends StatelessWidget {
   const GradeintContainer(
-      {super.key, required this.colors}); //another method of taking parameters
+      {super.key, required this.colors1}); //another method of taking parameters
 
-  final List<Color> colors; //declaring the parameter
+  final List<Color> colors1; //declaring the parameter
 
   @override
   Widget build(context) {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: colors, //using the varaible that was declared as parameters
+          colors: colors1, //using the varaible that was declared as parameters
           begin: startAlignment,
           end: endtAlignment,
         ),
       ),
-      child: Center(
+      child: const Center(
         child: DiceRoller(),
       ),
     );
